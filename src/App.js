@@ -1,37 +1,16 @@
 import './App.css';
-import contenu from './components/dataBase';
-import { changeLanguage, useState } from 'react';
-
+import ContextLanguage from './context/ContextLanguage';
+import Contenu from './components/Contenu';
 
 function App() {
 
-  const [languageDefault, setLanguageDefault] = useState("en-EN")
-
-  const changeLanguage = (event) => {
-    setLanguageDefault(event.target.alt)
-    console.log(languageDefault)
-  }
-
   return (
-<div className = "contain">
-  <nav> 
-    <ul>
-      {contenu.map((unContenu, i) => (
-      <li className="imagePays"><img onClick={changeLanguage} src={`assets/${unContenu.languages}.svg`} alt={unContenu.languages} /></li>
-      ))}
-    </ul>
-  </nav>
- <div className="form">
-  <h1 className="titleForm">
-      {contenu[0].title}
-  </h1>
+  <ContextLanguage>
+    <Contenu />
+  </ContextLanguage>
+  )
 
-    <h2 className="subtitleForm">
-      {contenu[0].subtitle}
-    </h2>
-    </div>
-</div>
- )
+  
 }
 
 

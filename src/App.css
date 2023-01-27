@@ -1,22 +1,40 @@
-.contain {
-  display: flex;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+
+
+.contain {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20px;
+ 
+}
+nav {
+  padding: 20px;
+  /* background-color: blue; */
+}
 
 .titleForm {
   color: white;
   font-size: 80px;
 }
-
 .form {
   text-align: center;
-  width: 1200px;
+  width: 900px;
   margin: auto; 
+  /* background-color: blueviolet; */
+}
+.titleForm {
+  color: white;
+  font-size: 60px;
 }
 
 .subtitleForm {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .imagePays {
@@ -25,4 +43,22 @@
 
 ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1030px) {
+ul {
+  flex-direction: row;
+  justify-content: center;
+  
+  
+}
+nav {
+  width: 100%;
+
+ }
+
+
 }
